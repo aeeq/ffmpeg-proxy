@@ -12,7 +12,7 @@ Sample URLs to launch with your hardware or software media player:
 ```http://127.0.0.1:32033/http://streaming.service.com/live.m3u8
    http://127.0.0.1:32033/https://streaming.service.com/live.m3u8
    http://127.0.0.1:32033/http://streaming.service.com/live%2Em3u8
-   http://127.0.0.1:32033/rtsp://streaming.service.com/live%2Em3u8
+   http://127.0.0.1:32033/rtsp://streaming.service.com/live/0
    http://your_local_ip_address:32033/http://streaming.service.com/live.m3u8
  ```
 
