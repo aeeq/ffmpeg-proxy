@@ -4,7 +4,7 @@
 
 read raw
 
-[[ $raw =~ (^GET /)(r?h?t?tps?://[^ ]*)( HTTP) ]] && url="${BASH_REMATCH[2]}"
+[[ $raw =~ (^GET /)(r?h?t?ts?ps?://[^ ]*)( HTTP) ]] && url="${BASH_REMATCH[2]}"
 
 if [ -z "$url" ]
 
