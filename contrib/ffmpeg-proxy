@@ -4,7 +4,7 @@
 
 read raw
 
-[[ $raw =~ (^GET /)(https?://[^ ]*)( HTTP) ]] && url="${BASH_REMATCH[2]}"
+[[ $raw =~ (^GET /)(r?h?t?tps?://[^ ]*)( HTTP) ]] && url="${BASH_REMATCH[2]}"
 
 if [ -z "$url" ]
 
@@ -14,8 +14,8 @@ then
 
 else
 
-    echo -e "HTTP/1.1 200 OK\n\rContent-Type: video/mp2t\n\rConnection: close\n\r"
+    echo -e "HTTP/1.1 200 OK\n\rContent-Type: video/mp2t\n\r"
     
-    /usr/bin/ffmpeg -user-agent "Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3" -i $url -map 0 -c copy -hide_banner -nostats -loglevel 0 -metadata service_provider=ffmpeg-proxy -metadata service_name=IPTV -f mpegts -
+    /usr/bin/ffmpeg -user_agent "Mozilla/5.0 (QtEmbedded; U; Linux; C) AppleWebKit/533.3 (KHTML, like Gecko) MAG200 stbapp ver: 2 rev: 234 Safari/533.3" -i $url -map 0 -c copy -hide_banner -nostats -loglevel 0 -metadata service_provider=ffmpeg-proxy -metadata service_name=IPTV -f mpegts -
 
 fi
